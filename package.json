@@ -1,0 +1,25 @@
+{
+  "name": "web_gpu_demos",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run start:demo-1",
+    
+    "start:demo-1": "npm install && npm run build:demo-1 && npm run serve",
+    "build:demo-1": "npm install && webpack --env entry=demo-1",
+
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "http-server dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^5.6.3",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1"
+  }
+}

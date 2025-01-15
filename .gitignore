@@ -1,0 +1,10 @@
+# ignore all files in the dist directory
+dist/
+
+# ignore all files in the node_modules directory
+node_modules/
+package-lock.json
+
+# ignore vscode settings
+.vscode/
+.DS_Store
