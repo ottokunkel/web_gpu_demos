@@ -6,7 +6,7 @@
 
        return {
            entry: {
-               [entryPoint]: `./demos/${entryPoint}/src/index.js`,
+               [entryPoint]: `./demos/${entryPoint}/src/index.ts`,
            },
            output: {
                filename: "[name].bundle.js",
@@ -21,5 +21,20 @@
                    scriptLoading: "defer",
                }),
            ],
+           module: {
+               rules: [
+                   {
+                       test: /\.ts$/,
+                       use: "ts-loader",
+                   },
+                    {
+                       test: /\.wgsl$/,
+                       type: 'asset/source', // will import as string
+                   },
+               ],
+           },
+           resolve: {
+               extensions: [".ts", ".wgsl"],
+           },
        };
    };
